@@ -28,11 +28,12 @@ jobs:
             python test_svc_controller.py
       - add_ssh_keys:
           fingerprints:
-          - fa:72:a8:aa:bc:50:53:b9:d0:0c:0c:d6:a6:96:83:25
+          - dd:22:b3:f6:dd:e7:c1:db:3b:29:93:7a:bf:8e:9f:e9
       - run:
           name: git clone circleci-flaskapp-demo repository
           command: |
-            git clone git@github.com:jitendramalan7/circleci-flaskapp-demo.git
+            #git clone git@github.com:jitendramalan7/circleci-flaskapp-demo.git
+            git clone git@github.com:SajivSingh/circleci-aws-python.git
             pwd;ls -latr; echo ""; ls -latr circleci-flaskapp-demo
             tar -czvf circleci-flaskapp-demo-latest.tar.gz circleci-flaskapp-demo
       - setup_remote_docker
